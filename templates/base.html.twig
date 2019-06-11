@@ -2,11 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}blog de renaud{% endblock %}</title>
+        
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
+    <header>{{include('blog/navbar.html.twig')}}</header>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+      <div class="container">
+
+    {% block body %} <h1>Bienvenue sur mon Blog !</h1> {% endblock %}
+      </div>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>

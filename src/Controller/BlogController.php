@@ -15,7 +15,7 @@ class BlogController extends AbstractController
     public function index()
     {
         return $this->render('blog/index.html.twig', [
-            'owner' => 'Thomas',
+            'owner' => 'Renaud',
         ]);
     }
 
